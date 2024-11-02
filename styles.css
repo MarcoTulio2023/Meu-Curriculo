@@ -1,0 +1,287 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Ajusta o espaçamento do conteúdo para não ficar escondido atrás do menu fixo */
+body {
+    padding-top: 60px; /* Ajuste o valor conforme a altura do menu */
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1px;
+}
+
+/* Estilos para o menu de navegação */
+nav {
+    position: fixed;       /* Fixa o menu no topo */
+    top: 0;                /* Define a posição no topo */
+    width: 100%;           /* Faz o menu ocupar toda a largura da página */
+    background-color: #e0f7fa; /* Define o fundo para o menu */
+    z-index: 1000;         /* Garante que o menu fique acima de outros elementos */
+    box-shadow: 0px 4px 2px -2px gray; /* Adiciona uma sombra ao menu */
+}
+
+nav ul {
+    list-style-type: none; /* Remove as marcas de lista */
+    padding: 10px;         /* Adiciona padding interno ao menu */
+    margin: 0;             /* Remove a margem padrão */
+    display: flex;         /* Usa Flexbox para alinhar os itens */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    flex-wrap: wrap;       /* Permite que os itens quebrem a linha quando necessário */
+}
+
+nav ul li {
+    margin-right: 20px;    /* Espaçamento entre os itens do menu */
+    margin-bottom: 10px;   /* Espaçamento abaixo para quando quebrar a linha */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #00796b;        /* Define a cor dos links */
+    font-weight: bold;     /* Deixa o texto dos links em negrito */
+}
+
+/* Estilos para a classe .a4 que simula uma folha A4 */
+.a4 {
+    width: 210mm;          /* Largura da folha A4 */
+    height: 650mm;         /* Altura da folha A4 */
+    margin: auto;
+    box-sizing: border-box;
+    padding: 10mm;         /* Margem interna */
+    background-color: #fff; /* Cor de fundo branca */
+    border: 1px solid #000; /* Borda preta para visualização */
+}
+
+.a4 h1 {
+    text-align: center;
+}
+
+.caixa-nome {
+    background-color: #e0f7fa; /* Cor de fundo azul claro */
+    color: #00796b;            /* Cor do texto */
+    padding: 10px;             /* Espaçamento interno */
+    border-radius: 5px;        /* Bordas arredondadas */
+    display: inline-block;     /* Ajusta a caixa ao conteúdo */
+    width: 95%;                /* Largura da caixa */
+    font-weight: bold;         /* Deixa o texto em negrito */
+}
+
+.container {
+    display: flex;
+    align-items: center;      /* Alinha a imagem e o texto no centro verticalmente */
+    flex-wrap: wrap;          /* Permite que os elementos "quebrem" para uma nova linha se necessário */
+}
+
+.container img {
+    margin-right: 10px;       /* Espaço entre a imagem e o texto */
+    width: 150px;             /* Tamanho da imagem */
+}
+
+.azul {
+    color: #00796b;
+}
+
+/* Estilo principal da seção de contato */
+.contact-section {
+    max-width: 600px;        /* Define a largura máxima da seção */
+    margin: 0 auto;          /* Centraliza a seção na página */
+    padding: 20px;           /* Adiciona preenchimento interno */
+    background-color: #e0f7fa; /* Cor de fundo da seção */
+    border-radius: 10px;     /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+}
+
+/* Estilo do título da seção de contato */
+.contact-section h1 {
+    text-align: center;      /* Centraliza o texto do título */
+    margin-bottom: 20px;     /* Adiciona espaço abaixo do título */
+}
+
+/* Estilo do formulário de contato */
+.contact-section form {
+    display: flex;           /* Usa o modelo flexbox para o layout */
+    flex-direction: column;  /* Organiza os elementos em coluna */
+}
+
+/* Estilo dos campos de entrada do formulário */
+.contact-section form input,
+.contact-section form textarea {
+    margin-bottom: 15px;     /* Espaço abaixo de cada campo */
+    padding: 10px;           /* Adiciona preenchimento interno */
+    border-radius: 5px;      /* Bordas arredondadas nos campos */
+    border: 1px solid #ddd;  /* Cor e estilo da borda */
+}
+
+/* Estilo do botão de envio */
+.contact-section form button {
+    padding: 10px;           /* Preenchimento interno do botão */
+    border: none;            /* Remove a borda padrão */
+    background-color: #00796b; /* Cor de fundo do botão */
+    color: white;            /* Cor do texto do botão */
+    border-radius: 5px;      /* Bordas arredondadas no botão */
+    cursor: pointer;         /* Define o cursor como pointer ao passar sobre o botão */
+}
+
+/* Efeito hover no botão de envio */
+.contact-section form button:hover {
+    background-color: #45a049; /* Muda a cor do fundo ao passar o mouse */
+}
+
+/* Estilo dos links de contato */
+.contact-links {
+    text-align: center;      /* Centraliza os links na página */
+    margin-top: 20px;        /* Adiciona espaço acima da seção de links */
+}
+
+/* Estilo individual dos links de contato */
+.contact-links a {
+    display: inline-block;   /* Faz os links se comportarem como blocos inline */
+    margin: 0 10px;          /* Espaço entre os links */
+    color: #333;             /* Cor do texto dos links */
+    text-decoration: none;   /* Remove o sublinhado dos links */
+    font-weight: bold;       /* Torna o texto dos links em negrito */
+}
+
+/* Efeito hover nos links de contato */
+.contact-links a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Consultas de mídia para tornar o design responsivo */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Mantém os itens em linha até que não haja mais espaço */
+        justify-content: flex-start; /* Alinha os itens à esquerda */
+    }
+    
+    nav ul li {
+        margin-right: 20px;  /* Espaço entre os itens horizontalmente */
+        margin-bottom: 10px; /* Espaço entre os itens verticalmente ao quebrar linha */
+    }
+
+    body {
+        padding-top: 80px;      /* Ajuste o padding-top para a altura do menu em dispositivos menores */
+    }
+
+    .a4 {
+        width: 90%;             /* Ajusta a largura da seção para 90% em telas menores */
+        height: auto;           /* Ajusta a altura automaticamente */
+    }
+
+    .container {
+        flex-direction: column; /* Alinha a imagem e o texto em coluna em telas menores */
+    }
+
+    .container img {
+        margin-right: 0;        /* Remove a margem à direita */
+        margin-bottom: 10px;    /* Adiciona espaço abaixo da imagem */
+        width: 100%;            /* Faz a imagem ocupar 100% da largura do contêiner */
+    }
+
+    .contact-section {
+        padding: 10px;          /* Reduz o preenchimento interno para se ajustar a telas menores */
+    }
+
+    .contact-section form input,
+    .contact-section form textarea {
+        width: 100%;            /* Faz os campos de entrada ocuparem 100% da largura */
+    }
+}
+
+@media print {
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+
+    .a4 {
+        border: none; /* Remove a borda ao imprimir */
+        width: 210mm;
+        height: 297mm;
+        box-shadow: none;
+    }
+
+    .caixa-nome {
+        background-color: #e0f7fa; /* Cor de fundo azul claro */
+        color: #00796b; /* Cor do texto */
+        padding: 10px; /* Espaçamento interno */
+        border-radius: 5px; /* Bordas arredondadas */
+        display: inline-block; /* Ajusta a caixa ao conteúdo */
+        font-weight: bold; /* Deixa o texto em negrito */
+        width: 95%; /* Largura fixa da caixa */
+    }
+
+    .container {
+        display: flex;
+        align-items: center; /* Alinha a imagem e o texto no centro verticalmente */
+    }
+    
+    .container img {
+        margin-right: 10px; /* Espaço entre a imagem e o texto */
+        width: 150px; /* Ajuste o tamanho da imagem */
+    }
+
+    .azul {
+        color: #00796b;
+    }
+
+    .contact-section {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .contact-section form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-section form input,
+    .contact-section form textarea {
+        margin-bottom: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    .contact-section form button {
+        padding: 10px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .contact-section form button:hover {
+        background-color: #45a049;
+    }
+
+    .contact-links {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .contact-links a {
+        display: inline-block;
+        margin: 0 10px;
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .contact-links a:hover {
+        text-decoration: underline;
+    }
+}
